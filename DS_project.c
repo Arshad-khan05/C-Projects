@@ -16,7 +16,7 @@ NODE *insert(NODE *first, int size);
 void eligible(NODE *first);
 void display(NODE *first);
 void compute_credits(NODE *first);
-
+//Creating a node to store the details of the student
 NODE *insert(NODE *first, int size)
 {
 
@@ -75,6 +75,7 @@ NODE *insert(NODE *first, int size)
     }
     return first;
 }
+//Calculating credits earned by a student
 void compute_credits(NODE *first)
 {
     NODE *temp;
@@ -105,6 +106,7 @@ void compute_credits(NODE *first)
         total_qc = 0;
     }
 }
+//Checking whether the student is eligible or not 
 void eligible(NODE *first)
 {
     static int b = 0;
@@ -147,6 +149,7 @@ void eligible(NODE *first)
     }
     printf("\n*********************************************************\n\n");
 }
+//Displaying details of the students 
 void display(NODE *first)
 {
     static int k = 0;
@@ -173,7 +176,7 @@ void display(NODE *first)
 int main()
 {
     NODE *first = NULL;
-
+//Creating 3 files for storing  details of the students
     FILE *file1;
     file1 = fopen("Eligibility_report.txt", "a+");
     fprintf(file1, "Students eligible for exam\n");
